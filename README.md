@@ -10,11 +10,4 @@ Moreover, all metadata associated with any entity used in LINCS experiments can 
 
 To install the package from R simply:
 
-###   install package devtools
-install.packages("devtools")
-
-###   load devtools package
-library(devtools)
-
-###   install LINCSdataportal package from Github
 install_github("mforlin/LINCSdataportal")

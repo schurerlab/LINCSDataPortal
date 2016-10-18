@@ -3,7 +3,7 @@ Title: Query LINCS (Library of Integrated Network-based Cellular Signatures) Dat
 Version: 0.0.0.9000
 Authors@R: person("Michele", "Forlin", email = "mxf854@med.miami.edu", role = c("aut", "cre"))
 Description: Access, query and download of LINCS data and metadata from LINCS 
-Depends: R (>= 3.3.1)
+Depends: R (>= 3.2.1)
 Imports: httr, jsonlite
 License: 
 Encoding: UTF-8

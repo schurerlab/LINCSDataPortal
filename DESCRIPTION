@@ -2,9 +2,8 @@ Package: LINCSdataportal
 Title: Query LINCS (Library of Integrated Network-based Cellular Signatures) Data and Metadata from LINCS Data Portal
 Version: 0.0.0.9000
 Author: person("Michele", "Forlin", email = "mxf854@med.miami.edu", role = c("aut", "cre"))
-Maintainer: person("Michele", "Forlin", email = "mxf854@med.miami.edu")
-Description: Access, query and download of LINCS data and metadata from LINCS 
-Depends: R (>= 3.3.1)
+Description: Access, query and download of LINCS data and metadata from LINCS
+Depends: R (>= 3.2.1)
 Imports: httr, jsonlite
 License: public
 Encoding: UTF-8

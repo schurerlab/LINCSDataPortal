@@ -22,7 +22,7 @@ download_dataset<- function(lds_id, path = "./")
     parsed <- strsplit(jsonlite::fromJSON(httr::content(resp, "text"))$results$documents$path,split = "bd2klincs/")[[1]][2]
 
     filepath = paste("/dcic/api/download?path=",parsed,"&file=",lds_id[i],".tar.gz",sep = "")
-    url <- httr::modify_url("http://dev3.ccs.miami.edu:8080", path = filepath)
+    url <- httr::modify_url("http://lincsportal.ccs.miami.edu", path = filepath)
 
     download.file(url,paste(path,lds_id[i],".tar.gz",sep = ""),mode = "wb")
   }

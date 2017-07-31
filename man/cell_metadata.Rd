@@ -19,4 +19,3 @@ Retrieve metadata associated with a cell (cl) used in LINCS experiments.
 cell_metadata("mcf7")
 
 }
-

@@ -19,4 +19,3 @@ Retrieve metadata associated with a protein measured or used in LINCS experiment
 protein_metadata("ACK")
 
 }
-

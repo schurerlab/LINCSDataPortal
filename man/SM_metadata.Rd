@@ -19,4 +19,3 @@ Retrieve metadata associated with a Small Molecule (SM) used in LINCS experiment
 SM_metadata("afatinib")
 
 }
-

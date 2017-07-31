@@ -19,4 +19,3 @@ Retrieve metadata associated with a gene measured in LINCS experiments.
 gene_metadata("BRCA1")
 
 }
-

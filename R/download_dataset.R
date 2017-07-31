@@ -5,8 +5,10 @@
 #' @return NULL
 #' @export
 #' @examples
+#' \dontrun{
 #' download_dataset("LDS-1266")
 #' download_dataset("LDS-1173", path = "/datasets")
+#' }
 #'
 
 download_dataset<- function(lds_id, path = "./")
@@ -24,7 +26,7 @@ download_dataset<- function(lds_id, path = "./")
     filepath = paste("/dcic/api/download?path=",parsed,"&file=",lds_id[i],".tar.gz",sep = "")
     url <- httr::modify_url("http://lincsportal.ccs.miami.edu", path = filepath)
 
-    download.file(url,paste(path,lds_id[i],".tar.gz",sep = ""),mode = "wb")
+    utils::download.file(url,paste(path,lds_id[i],".tar.gz",sep = ""),mode = "wb")
   }
 
 }

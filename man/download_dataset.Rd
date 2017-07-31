@@ -15,8 +15,9 @@ download_dataset(lds_id, path = "./")
 Download LINCS dataset packages, given dataset id's, from Lincs Data Portal.
 }
 \examples{
+\dontrun{
 download_dataset("LDS-1266")
 download_dataset("LDS-1173", path = "/datasets")
-
 }
 
+}

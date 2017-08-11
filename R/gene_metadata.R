@@ -1,6 +1,6 @@
 #' Retrieve metadata associated with a gene measured in LINCS experiments.
 #'
-#' @param ge String representing a gene of interest
+#' @param ge String representing a gene symbol of interest
 #' @return data frame with available gene metadata
 #' @export
 #' @examples
@@ -17,6 +17,16 @@ gene_metadata=function(ge)
   }
 
   parsed =  jsonlite::fromJSON(httr::content(resp, "text"))
+  result=0
+  if(parsed$results$totalDocuments!=0)
+  {
+    result = parsed$results$documents[grep("Gene",parsed$results$documents$category),]
+    if(dim(result)[1]==0)
+    { result=0 }
+  }
+  if(result==0)
+  { stop(paste("No gene metadata found in LINCS with '",ge, "' symbol",sep=""), call. = FALSE)
+  }
 
-  return(parsed$results$documents[grep("Gene",parsed$results$documents$category),])
+  return(result)
 }

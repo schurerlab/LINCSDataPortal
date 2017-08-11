@@ -1,10 +1,11 @@
 #' Retrieve metadata associated with a cell (cl) used in LINCS experiments.
 #'
-#' @param cl String representng a cell of interest
+#' @param cl String representng a cell name of interest
 #' @return data frame with available cell metadata
 #' @export
 #' @examples
 #' cell_metadata("mcf7")
+#' cell_metadata("PC-3")
 #'
 
 cell_metadata=function(cl)
@@ -16,7 +17,9 @@ cell_metadata=function(cl)
    }
 
   parsed =  jsonlite::fromJSON(httr::content(resp, "text"))
+  if(parsed$results$totalDocuments==0)
+  { stop(paste("No cell metadata found in LINCS with '",cl, "' name",sep=""), call. = FALSE)
+  }
 
-
-return(parsed$results$documents)
+ return(parsed$results$documents)
 }

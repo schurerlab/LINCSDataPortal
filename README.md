@@ -10,4 +10,4 @@ Moreover, all metadata associated with any entity used in LINCS experiments can 
 
 To install the package from R simply use the install_github function from package devtools:
 
-install_github("mforlin/LINCSDataPortal")
+install_github("schurerlab/LINCSDataPortal")

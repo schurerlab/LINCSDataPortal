@@ -17,6 +17,9 @@ datalevels <- function(lds_id)
 
   parsed =  jsonlite::fromJSON(httr::content(resp, "text"))$results$documents
   output = data.frame(cbind("level"=parsed$datalevels[[1]],"LDS"=parsed$datasetlevels[[1]]))
+  if(length(output)==0)
+  { stop(paste("No data levels found for LINCS dataset with '",lds_id, "' LINCS ID",sep=""), call. = FALSE)
+  }
   return(output)
 
 }

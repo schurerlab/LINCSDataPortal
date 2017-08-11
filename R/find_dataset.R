@@ -1,7 +1,7 @@
 #' Retrieve datasets from LINCS data portal associated with a term of interest (gene, protein, small molecule)
 #'
-#' @param searchterm String representing the search term
-#' @return data.frame containing dataset id and description
+#' @param searchterm String representing the keyword (search term) to find LINCS datasets. Can be a cell, small molecule, protein, etc.
+#' @return data frame containing dataset id and description
 #' @export
 #' @examples
 #' find_dataset("afatinib")
@@ -31,6 +31,10 @@ find_dataset <- function(searchterm) {
     )
   }
 
+  if(parsed$results$totalDocuments==0)
+  {
+    stop(paste("No datasets found for '",searchterm, "'",sep=""), call. = FALSE)
+  }
 
   return(parsed$results$documents)
 }

@@ -29,6 +29,10 @@ dataset_entities <- function(lds_id)
       call. = FALSE
     )
   }
+  if(parsed$results$totalDocuments==0)
+  {
+    stop(paste("No entities found for dataset with '",lds_id, "' LINCS ID",sep=""), call. = FALSE)
+  } else {
 
   whichEntities=matrix(unlist(strsplit(parsed$results$documents$counts[[1]],split = ":")),ncol = 2,byrow = TRUE)[,1]
   L=vector("list", length(whichEntities))
@@ -36,6 +40,6 @@ dataset_entities <- function(lds_id)
   {  names(L)[i]=whichEntities[i]
   L[i]=parsed$results$documents[,names(parsed$results$documents)==whichEntities[i]]
   }
-
+  }
   return(L)
 }

@@ -7,7 +7,7 @@
 protein_metadata(pr)
 }
 \arguments{
-\item{pr}{String representing a protein of interest}
+\item{pr}{String representing a protein name of interest}
 }
 \value{
 data frame with available protein metadata

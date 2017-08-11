@@ -7,7 +7,7 @@
 SM_metadata(sm)
 }
 \arguments{
-\item{sm}{String representng a small molecule of interest}
+\item{sm}{String containing the name of a small molecule of interest}
 }
 \value{
 data frame with available small molecule metadata
@@ -17,5 +17,6 @@ Retrieve metadata associated with a Small Molecule (SM) used in LINCS experiment
 }
 \examples{
 SM_metadata("afatinib")
+SM_metadata("GSK-1070916")
 
 }

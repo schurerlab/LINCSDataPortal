@@ -7,7 +7,7 @@
 cell_metadata(cl)
 }
 \arguments{
-\item{cl}{String representng a cell of interest}
+\item{cl}{String representng a cell name of interest}
 }
 \value{
 data frame with available cell metadata
@@ -17,5 +17,6 @@ Retrieve metadata associated with a cell (cl) used in LINCS experiments.
 }
 \examples{
 cell_metadata("mcf7")
+cell_metadata("PC-3")
 
 }

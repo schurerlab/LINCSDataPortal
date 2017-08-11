@@ -7,10 +7,10 @@
 find_dataset(searchterm)
 }
 \arguments{
-\item{searchterm}{String representing the search term}
+\item{searchterm}{String representing the keyword (search term) to find LINCS datasets. Can be a cell, small molecule, protein, etc.}
 }
 \value{
-data.frame containing dataset id and description
+data frame containing dataset id and description
 }
 \description{
 Retrieve datasets from LINCS data portal associated with a term of interest (gene, protein, small molecule)

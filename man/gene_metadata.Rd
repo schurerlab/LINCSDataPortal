@@ -7,7 +7,7 @@
 gene_metadata(ge)
 }
 \arguments{
-\item{ge}{String representing a gene of interest}
+\item{ge}{String representing a gene symbol of interest}
 }
 \value{
 data frame with available gene metadata
@@ -17,5 +17,6 @@ Retrieve metadata associated with a gene measured in LINCS experiments.
 }
 \examples{
 gene_metadata("BRCA1")
+gene_metadata("CDK1")
 
 }

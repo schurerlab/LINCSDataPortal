@@ -5,6 +5,7 @@
 #' @export
 #' @examples
 #' gene_metadata("BRCA1")
+#' gene_metadata("CDK1")
 #'
 
 gene_metadata=function(ge)
@@ -17,14 +18,14 @@ gene_metadata=function(ge)
   }
 
   parsed =  jsonlite::fromJSON(httr::content(resp, "text"))
-  result=0
+  result=NULL
   if(parsed$results$totalDocuments!=0)
   {
     result = parsed$results$documents[grep("Gene",parsed$results$documents$category),]
     if(dim(result)[1]==0)
-    { result=0 }
+    { result=NULL }
   }
-  if(result==0)
+  if(is.null(result))
   { stop(paste("No gene metadata found in LINCS with '",ge, "' symbol",sep=""), call. = FALSE)
   }
 

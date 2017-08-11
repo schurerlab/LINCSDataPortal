@@ -1,4 +1,4 @@
-# LINCSdataportal
+# LINCSDataPortal
 R package to query LINCS Data Portal
 
 LINCS Data Portal (http://lincsportal.ccs.miami.edu) is the prime repository for all LINCS project data (www.lincsproject.org).

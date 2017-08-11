@@ -1,10 +1,11 @@
 #' Retrieve metadata associated with a Small Molecule (SM) used in LINCS experiments.
 #'
-#' @param sm String representng a small molecule of interest
+#' @param sm String containing the name of a small molecule of interest
 #' @return data frame with available small molecule metadata
 #' @export
 #' @examples
 #' SM_metadata("afatinib")
+#' SM_metadata("GSK-1070916")
 #'
 
 SM_metadata=function(sm)
@@ -17,6 +18,9 @@ SM_metadata=function(sm)
     }
 
    parsed =  jsonlite::fromJSON(httr::content(resp, "text"))
+   if(parsed$results$totalDocuments==0)
+   { stop(paste("No small molecule found in LINCS with '",sm, "' name",sep=""), call. = FALSE)
+     }
 
    return(parsed$results$documents)
 }

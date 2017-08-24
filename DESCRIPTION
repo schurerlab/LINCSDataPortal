@@ -1,6 +1,6 @@
 Package: LINCSDataPortal
 Title: Query LINCS project data and metadata from LINCS Data Portal
-Version: 0.1.0
+Version: 0.1.1
 Date: 2017-08-11
 Author: Michele Forlin <mxf854@med.miami.edu>
 Maintainer: Michele Forlin <mxf854@med.miami.edu>

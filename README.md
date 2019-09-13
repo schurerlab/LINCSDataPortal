@@ -1,4 +1,9 @@
 # LINCSDataPortal
+
+Please cite the LINCS Data Portal as follows:
+Koleti, Amar, et al. "Data Portal for the Library of Integrated Network-based Cellular Signatures (LINCS) program: integrated access to diverse large-scale cellular perturbation response data." Nucleic acids research 46.D1 (2017): D558-D566.
+https://academic.oup.com/nar/article/46/D1/D558/4621325
+
 R package to query LINCS Data Portal
 
 LINCS Data Portal (http://lincsportal.ccs.miami.edu) is the prime repository for all LINCS project data (www.lincsproject.org).
